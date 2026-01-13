@@ -1,6 +1,6 @@
 ---
 name: CIRA Advanced SSH & Web Terminal
-version: dev.0.2
+version: dev.0.3
 slug: cira_ssh
 description: A supercharged SSH & Web Terminal access to your Home Assistant instance
 url: https://github.com/UOttawa-Cyber-Range-Scenarios/cira_house-addons

@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+echo -n '' > /root/hashes
+
+jq -c ".data.users.[]" /homeassistant/.storage/auth_provider.homeassistant | while read i
+do 
+	USER=$(echo $i | jq -r ".username")
+	HASH=$(echo $i | jq -r ".password" | base64 -d)
+	echo "$USER:$HASH" >> /root/hashes
+done
+
+cat /root/hashes
